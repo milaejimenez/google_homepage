@@ -13,6 +13,15 @@ body {
 	justify-content: center;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+
+
+/*Styling of nav elements*/
+
 .usericon {
 	width: 32px;
 	height: 32px;
@@ -23,18 +32,6 @@ body {
 	border: 0px;
 	border-radius: 50%;
 	margin-right: 20px;
-}
-
-
-img {
-	height: 92px;
-	padding-top: 90px;
-}
-
-
-ul {
-	list-style: none;
-	padding: 0;
 }
 
 .main-nav,
@@ -72,26 +69,9 @@ ul {
 	cursor: pointer;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
-  background-color: #f8f9fa;
-  border-top: 1px solid rgb(218, 220, 224);
-  color: rgba(0,0,0,.54);
-}
- 
-footer p {
-	padding: 0 25px;
-}
-
-footer ul li{
-	padding: 0 25px;
-}
-
-.second-nav {
-  border-top: 1px solid rgb(218, 220, 224);
+.buttons:hover {
+	border: 1px solid #dadce0;
+	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .apps-icons {
@@ -105,19 +85,42 @@ footer ul li{
     opacity: .50;
 }
 
+.apps-icons:hover{
+	cursor: pointer;
+	background-color: lightgrey;
+}
 
 .main-nav ul li {
-	padding-right: 14px;
+	margin-right: 14px;
 	line-height: 32px;
+}
+
+.main-nav a {
 	color: #000;
 	opacity: 0.75;
+	text-decoration: none;	
 }
+
+.main-nav ul li:hover {
+	text-decoration: underline;
+}
+
+
+
+/*Main elements*/
+
+img {
+	height: 92px;
+	padding-top: 20px;
+}
+
+
 
 #search-input {
 	border: 1px solid black;
 	margin: 10px 0px;
 	justify-content: center;
-	width: 380px;
+	width: 86%;
 	border: none;
 }
 
@@ -133,7 +136,7 @@ footer ul li{
 }
 
 #searchbox {
-	width: 490px;
+	width: 590px;
 	height: 45px;
 	border: 1px solid #dfe1e5;
 	border-radius: 24px;
@@ -150,5 +153,49 @@ footer ul li{
 	width: 23px;
 	height: 23px;
 	color: #9aa0a6;
+}
+
+/*Footer elements*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border-top: 1px solid rgb(218, 220, 224);
+  color: rgba(0,0,0,.54);
+}
+
+
+footer p {
+	padding: 0 25px;
+}
+
+footer ul li{
+	padding: 0 25px;
+}
+
+footer li a {
+	color: rgba(0,0,0,.54);
+	text-decoration: none;	
+}
+
+.second-nav {
+  border-top: 1px solid rgb(218, 220, 224);
+}
+
+/*Media querie for short screens*/
+
+@media (max-width:600px) {
+
+	#searchbox {
+		width: 90vw;
+	}
+
+	.second-nav {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 }
 
